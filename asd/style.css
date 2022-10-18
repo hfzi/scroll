@@ -1,0 +1,68 @@
+body {
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  min-height: 10000px;
+  width: 100%;
+  background-size: 5%;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 300px;
+  background: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  perspective: 100px;
+  transform-style: preserve-3d;
+}
+.container .square {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background: #000;
+  transition-property: transform, visibility, opacity;
+  /* transition-duration: 0.2s, 0s, 0.2s; */
+  transition-timing-function: linear, linear, ease-in-out;
+  transition-delay: 0s, 0s, 0s;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.container .square p {
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  text-align: center;
+  color: #fff;
+}
+.container .square-1 {
+  top: 5px;
+  left: 300px;
+}
+.container .square-2 {
+  top: 105px;
+  left: 210px;
+}
+.container .square-3 {
+  top: 440px;
+  left: 320px;
+}
+.container .square-4 {
+  top: 490px;
+  left: 200px;
+}
+.container .square-5 {
+  top: 350px;
+  left: 120px;
+}
